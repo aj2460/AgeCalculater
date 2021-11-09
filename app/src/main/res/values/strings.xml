@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">CalculateAge</string>
+    <string name="title1">CALCULATE YOUR</string>
+    <string name="title2">AGE</string>
 </resources>
