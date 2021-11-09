@@ -15,6 +15,7 @@
     <color name="c4">#b7b7a4</color>
     <color name="c5">#a5a58d</color>
     <color name="TextColor">#6b705c</color>
+    <color name="TextColorBack">#6b705c33</color>
 
 
 </resources>
