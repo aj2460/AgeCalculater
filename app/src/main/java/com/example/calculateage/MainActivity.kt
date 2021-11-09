@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import com.example.calculateage.databinding.ActivityMainBinding
+import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
@@ -37,6 +38,11 @@ class MainActivity : AppCompatActivity() {
         DatePickerDialog(this,
         DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
             binding.tvSelectedDate.text="$dayOfMonth/${month+1}/$year"
+            val date="$dayOfMonth/${month+1}/$year"
+            val sdf=SimpleDateFormat("dd/MM/yyyy")
+            val theDate=sdf.parse(date)
+            val millionSeconds = Calendar.getInstance().timeInMillis - theDate.time
+            binding.tvAgeInMin.text = java.util.concurrent.TimeUnit.MILLISECONDS.toMinutes(millionSeconds).toString()
         },year,month,day).show()
 
     }
